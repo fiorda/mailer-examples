@@ -10,18 +10,15 @@ The <tt>action_name</tt> action will return the corresponding <tt>action_name.X.
 
 Instance variables in the mailer are passed to the view.
 
-<tt>
-class UserMailer < ActionMailer::Base
-  default from: 'notifications@example.com'
+    class UserMailer < ActionMailer::Base
+      default from: 'notifications@example.com'
    
-  def action_name(params)
-    @params = params
-    mail(to: user_email, subject: 'The subject')
-  end
+      def action_name(params)
+        @params = params
+        mail(to: user_email, subject: 'The subject')
+      end
 
-end
-</tt>
-
+    end
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
