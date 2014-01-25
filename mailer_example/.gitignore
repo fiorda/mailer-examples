@@ -1,8 +1,8 @@
 /tmp
 /db/*.sqlite3
 /db/*.sqlite3-journal
-.tmp
-.sw*
+*.tmp
+*.sw*
 /log/*
 
 .rspec

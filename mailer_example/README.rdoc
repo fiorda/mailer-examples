@@ -6,10 +6,11 @@ The mailer behaves similarly to a controller; has its own actions and views.
 
 The Mailer class is located in +app/mailers/mailer_name.rb+; views can be formatted
 as html.erb and txt.erb for clients not supporting HTML emails.
-The <tt>action_name</tt> action will return the corresponding <tt>action_name.X.erb</tt> view.
+The <tt>action_name</tt> action will return the corresponding <tt>action_name.X.erb</tt> view.<br/>
 Instance variables in the mailer are passed to the view.
 
 +
+
 class UserMailer < ActionMailer::Base
   default from: 'notifications@example.com'
    
@@ -19,6 +20,7 @@ class UserMailer < ActionMailer::Base
   end
 
 end
+
 +
 
 
