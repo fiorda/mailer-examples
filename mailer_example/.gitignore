@@ -1,0 +1,8 @@
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+.tmp
+.sw*
+
+.rspec
+Gemfile.lock
