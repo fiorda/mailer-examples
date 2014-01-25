@@ -1,27 +1,25 @@
-== README
+== USING MAILER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To generate a new mailer, run <tt>rails g mailer MailerName</tt>
 
-Things you may want to cover:
+The mailer behaves similarly to a controller; has its own actions and views.
 
-* Ruby version
+The Mailer class is located in +app/mailers/mailer_name.rb+; views can be formatted
+as html.erb and txt.erb for clients not supporting HTML emails.
+The <tt>action_name</tt> action will return the corresponding <tt>action_name.X.erb</tt> view.
+Instance variables in the mailer are passed to the view.
 
-* System dependencies
++
+class UserMailer < ActionMailer::Base
+  default from: 'notifications@example.com'
+   
+  def action_name(params)
+    @params = params
+    mail(to: user_email, subject: 'The subject')
+  end
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+end
++
 
 
 Please feel free to use a different markup language if you do not plan to run
