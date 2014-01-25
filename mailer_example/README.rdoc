@@ -22,4 +22,4 @@ Instance variables in the mailer are passed to the view.
 
 The mailer can then be called from any controller by
 
-+MailerName.action_name(params).deliver+
+<tt>MailerName.action_name(params).deliver</tt>
