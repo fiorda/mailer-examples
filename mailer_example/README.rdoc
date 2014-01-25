@@ -10,7 +10,7 @@ The <tt>action_name</tt> action will return the corresponding <tt>action_name.X.
 
 Instance variables in the mailer are passed to the view.
 
-    class UserMailer < ActionMailer::Base
+    class MailerName < ActionMailer::Base
       default from: 'notifications@example.com'
    
       def action_name(params)
@@ -20,5 +20,6 @@ Instance variables in the mailer are passed to the view.
 
     end
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The mailer can then be called from any controller by
+
++MailerName.action_name(params).deliver+
